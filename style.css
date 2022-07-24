@@ -1,5 +1,111 @@
+@font-face {
+  font-family: "WaterGalon";
+  src: url(fonts/logoFont/Water\ Galon.ttf);
+}
+
+@font-face {
+  font-family: "WaffleStory";
+  src: url(fonts/textFont/Waffle\ Story.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  height: 125px;
+  background-color: #f7f7f7;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 143, 195);
+}
+
+.header img {
+  max-height: 110px;
+  max-width: 110px;
+  margin-left: 20px;
+}
+
+.header-text {
+  text-transform: uppercase;
+  font-size: 23px;
+  color: rgba(255, 143, 195);
+  font-family: "WaterGalon", sans-serif;
+  background-color: #f7f7f7;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header-text:hover {
+  color: rgba(255, 143, 195, 0.719);
+}
+
+.header-nav {
+  display: flex;
+  gap: 14px;
+  padding-left: 15x;
+}
+
+.header-nav-item {
+  text-decoration: none;
+  font-family: "WaffleStory", sans-serif;
+  font-size: 18px;
+  color: rgb(150, 64, 231);
+  transition: 0.2s;
+}
+
+.header-nav-item:hover {
+  color: rgba(150, 64, 231, 0.726);
+}
+
+.header-ornament img {
+  margin-left: 10%;
+  margin-top: 3%;
+  max-width: 800px;
+  height: auto;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.header-login {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  width: 23%;
+  margin-right: 60px;
+  align-items: center;
+}
+
+.header-login-item {
+  text-decoration: none;
+  font-family: "WaffleStory", sans-serif;
+  font-size: 18px;
+  color: rgb(150, 64, 231);
+  transition: 0.2s;
+}
+
+.header-login-item:hover {
+  color: rgba(150, 64, 231, 0.726);
+}
+
+.header-login-button {
+  text-decoration: none;
+  font-family: "WaffleStory", sans-serif;
+  font-size: 18px;
+  color: rgb(150, 64, 231);
+  padding: 4px 10px;
+  background-color: #f7f7f7;
+  border: 2px solid rgb(150, 64, 231);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header-login-button:hover {
+  color: rgba(150, 64, 231, 0.726);
+  border: 2px solid rgb(150, 64, 231, 0.726);
 }
