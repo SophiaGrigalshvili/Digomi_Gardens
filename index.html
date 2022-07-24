@@ -10,9 +10,12 @@
   <body>
     <header class="header">
       <img src="images/logo.png" alt="Digomi Gardens Logo" />
-      <button class="header-text" id="digomi-gardens">
-        < Digomi Gardens >
-      </button>
+      <div class="header-text-dropdown" data-dropdown>
+        <button class="header-text" data-dropdown-button>
+          < Digomi Gardens >
+        </button>
+        <div class="header-dropdown" id="dropdown-gardens"></div>
+      </div>
       <nav class="header-nav">
         <a href="#" class="header-nav-item">Home</a>
         <a href="#" class="header-nav-item">About Us </a>
@@ -26,23 +29,25 @@
         <button class="header-login-button">Sign Up</button>
       </div>
     </header>
-    <section class="dropdown-menus">
-      <div id="dropdown-gardens"></div>
-    </section>
   </body>
   <script>
-    const digomiGardens = document.getElementById("digomi-gardens");
+    document.addEventListener("click", (e) => {
+      const isDropdownButton = e.target.matches("[data-dropdown-button]");
+      if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
+        return;
 
-    const dropdownGardens = document.getElementById("dropdown-gardens");
-
-    dropdownGardens.style.visibility = "hidden";
-
-    digomiGardens.addEventListener("click", () => {
-      if (dropdownGardens.style.visibility === "hidden") {
-        dropdownGardens.style.visibility = "visible";
-      } else {
-        dropdownGardens.style.visibility = "hidden";
+      let currentDropdown;
+      if (isDropdownButton) {
+        currentDropdown = e.target.closest("[data-dropdown]");
+        currentDropdown.classList.toggle("active");
       }
+
+      document
+        .querySelectorAll("[data-dropdown].active")
+        .forEach((dropdown) => {
+          if (dropdown === currentDropdown) return;
+          dropdown.classList.remove("active");
+        });
     });
   </script>
 </html>
