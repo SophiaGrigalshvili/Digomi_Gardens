@@ -22,6 +22,10 @@ body {
   gap: 20px;
   border-bottom: 1px solid #f292ac;
   position: sticky;
+  background-image: url(images/headerOrnament.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
 }
 
 .header img {
@@ -35,7 +39,8 @@ body {
   font-size: 23px;
   color: #f292ac;
   font-family: "WaterGalon", sans-serif;
-  background-color: #f7f7f7;
+  background-color: transparent;
+  width: 300px;
   border: none;
   cursor: pointer;
   transition: 0.2s;
@@ -55,7 +60,7 @@ body {
   height: 500px;
   width: 1400px;
   margin-top: 47px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(31, 0, 5, 0.1);
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -70,13 +75,13 @@ body {
 
 .header-nav {
   display: flex;
-  gap: 14px;
-  padding-left: 15x;
+  gap: 16px;
 }
 
 .header-nav-item {
   text-decoration: none;
   font-family: "WaffleStory", sans-serif;
+  white-space: nowrap;
   font-size: 18px;
   color: #7ecc9b;
   transition: 0.2s;
@@ -86,22 +91,14 @@ body {
   color: #3da55c;
 }
 
-.header-ornament img {
-  margin-left: 10%;
-  margin-top: 3%;
-  max-width: 800px;
-  height: auto;
-  width: 100%;
-  opacity: 0.5;
-}
-
 .header-login {
   display: flex;
   justify-content: flex-end;
   gap: 18px;
-  width: 23%;
+  width: 50%;
   margin-right: 60px;
   align-items: center;
+  white-space: nowrap;
 }
 
 .header-login-item {

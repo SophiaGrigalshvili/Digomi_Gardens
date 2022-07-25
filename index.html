@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digomi Gardens</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.png" />
   </head>
   <body>
     <header class="header">
@@ -22,7 +23,7 @@
         <a href="#" class="header-nav-item">Contact</a>
       </nav>
       <div class="header-ornament">
-        <img src="images/headerOrnament.png" />
+        <!-- <img src="images/headerOrnament.png" /> -->
       </div>
       <div class="header-login">
         <a href="#" class="header-login-item">Log In</a>
@@ -31,6 +32,7 @@
     </header>
   </body>
   <script>
+    //this script is stolen lmao
     document.addEventListener("click", (e) => {
       const isDropdownButton = e.target.matches("[data-dropdown-button]");
       if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
