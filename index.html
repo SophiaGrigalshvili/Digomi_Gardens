@@ -30,9 +30,83 @@
         <button class="header-login-button">Sign Up</button>
       </div>
     </header>
+    <section class="section-welcome">
+      <div class="section-welcome-text">
+        <h1 class="section-welcome-title">welcome to digomi gardens</h1>
+        <div class="section-welcome-paragraph">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
+          officia veritatis sint asperiores neque laudantium distinctio, cum
+          maiores sapiente mollitia ipsam hic esse quisquam, deleniti illum eum
+          tempore assumenda. Blanditiis.
+        </div>
+        <div class="section-welcome-btn-wrapper">
+          <button class="section-welcome-btn">Learn More</button>
+          <button class="section-welcome-btn">Contact Us</button>
+        </div>
+      </div>
+      <aside class="section-welcome-slideshow">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+            <input type="radio" name="radio-btn" id="radio5" />
+            <input type="radio" name="radio-btn" id="radio6" />
+            <input type="radio" name="radio-btn" id="radio7" />
+            <input type="radio" name="radio-btn" id="radio8" />
+            <div class="slide first">
+              <img src="images/slide1.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide2.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide4.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide5.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide6.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide7.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/slide8.jpg" alt="" />
+            </div>
+            <div class="slide"></div>
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              <div class="auto-btn5"></div>
+              <div class="auto-btn6"></div>
+              <div class="auto-btn7"></div>
+              <div class="auto-btn8"></div>
+            </div>
+          </div>
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+            <label for="radio7" class="manual-btn"></label>
+            <label for="radio8" class="manual-btn"></label>
+          </div>
+        </div>
+      </aside>
+    </section>
   </body>
   <script>
-    //this script is stolen lmao
+    //this script is stolen lmao, dropdown menu code
     document.addEventListener("click", (e) => {
       const isDropdownButton = e.target.matches("[data-dropdown-button]");
       if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
@@ -51,5 +125,16 @@
           dropdown.classList.remove("active");
         });
     });
+
+    //this is also stolen lmaoo, slideshow code
+
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById("radio" + counter).checked = true;
+      counter++;
+      if (counter > 8) {
+        counter = 1;
+      }
+    }, 5000);
   </script>
 </html>
